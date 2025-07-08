@@ -14,3 +14,6 @@
 .glide/
 
 .idea
+config.json
+examples/aihc/dataset/example_dataset_demo.go
+examples/aihc/resource/example_aijob_demo.go

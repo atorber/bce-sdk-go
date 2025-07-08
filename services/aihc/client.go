@@ -13,8 +13,8 @@ import (
 type Interface interface {
 	resource.Interface
 	inference.Interface
-	dev.Interface
 	dataset.Interface
+	dev.Interface
 }
 
 type Client struct {
@@ -75,7 +75,7 @@ func NewClientWithSTS(ak, sk, sessionToken, endpoint string) (Interface, error) 
 		return nil, err
 	}
 	clientset.datasetClient = datasetClient
-	
+
 	return clientset, nil
 }
 
@@ -273,3 +273,4 @@ func (clientset *Client) DescribeDatasetVersion(datasetId, versionId string) (*v
 
 func (clientset *Client) DescribeDatasetVersions(datasetId string, options *v2.DescribeDatasetVersionsOptions) (*v2.DescribeDatasetVersionsResponse, error) {
 	return clientset.datasetClient.DescribeDatasetVersions(datasetId, options)
+}
