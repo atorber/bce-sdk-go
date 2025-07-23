@@ -28,7 +28,7 @@ type Dataset struct {
 	VisibilityUser  []PermissionEntry `json:"visibilityUser,omitempty"`  // 用户权限列表
 	VisibilityGroup []PermissionEntry `json:"visibilityGroup,omitempty"` // 用户组权限列表
 	Permission      string            `json:"permission"`                // 当前用户拥有的读写权限
-	LatestVersionId string            `json:"latestVersionId,omitempty"` // 最新版本ID
+	LatestVersionID string            `json:"latestVersionId,omitempty"` // 最新版本ID
 	LatestVersion   string            `json:"latestVersion,omitempty"`   // 最新版本号
 	CreatedAt       string            `json:"createdAt"`                 // 创建时间
 	UpdatedAt       string            `json:"updatedAt"`                 // 更新时间
@@ -50,7 +50,7 @@ type CreateDatasetRequest struct {
 }
 
 type CreateDatasetResponse struct {
-	RequestId string `json:"requestId"`
+	RequestID string `json:"requestId"`
 	ID        string `json:"id"`
 }
 
@@ -71,14 +71,14 @@ type ModifyDatasetRequest struct {
 }
 
 type ModifyDatasetResponse struct {
-	RequestId string `json:"requestId"`
+	RequestID string `json:"requestId"`
 }
 
 // DescribeDataset
 // 参考百度智能云AIHC文档 https://cloud.baidu.com/doc/AIHC/s/Umc0988jj
 
 type DescribeDatasetResponse struct {
-	RequestId          string                `json:"requestId"`
+	RequestID          string                `json:"requestId"`
 	ID                 string                `json:"id"`
 	Name               string                `json:"name"`
 	StorageType        string                `json:"storageType"`
@@ -91,7 +91,7 @@ type DescribeDatasetResponse struct {
 	VisibilityUser     []PermissionEntry     `json:"visibilityUser"`
 	VisibilityGroup    []PermissionEntry     `json:"visibilityGroup"`
 	Permission         string                `json:"permission"`
-	LatestVersionId    string                `json:"latestVersionId"`
+	LatestVersionID    string                `json:"latestVersionId"`
 	LatestVersion      string                `json:"latestVersion"`
 	LatestVersionEntry *DatasetVersionDetail `json:"latestVersionEntry"`
 	CreatedAt          string                `json:"createdAt"`
@@ -99,7 +99,7 @@ type DescribeDatasetResponse struct {
 }
 
 type DatasetVersionDetail struct {
-	RequestId      string `json:"requestId"`
+	RequestID      string `json:"requestId"`
 	ID             string `json:"id"`
 	Version        string `json:"version"`
 	Description    string `json:"description"`
@@ -124,7 +124,7 @@ type DescribeDatasetsOptions struct {
 }
 
 type DescribeDatasetsResponse struct {
-	RequestId  string    `json:"requestId"`
+	RequestID  string    `json:"requestId"`
 	TotalCount int       `json:"totalCount"`
 	Datasets   []Dataset `json:"datasets"`
 }
@@ -133,7 +133,7 @@ type DescribeDatasetsResponse struct {
 // 参考百度智能云AIHC文档 https://cloud.baidu.com/doc/AIHC/s/Dmc09bpj1
 
 type DescribeDatasetVersionResponse struct {
-	RequestId       string              `json:"requestId"`
+	RequestID       string              `json:"requestId"`
 	ID              string              `json:"id"`
 	Name            string              `json:"name"`
 	StorageType     string              `json:"storageType"`
@@ -160,7 +160,7 @@ type DescribeDatasetVersionsOptions struct {
 }
 
 type DescribeDatasetVersionsResponse struct {
-	RequestId  string                `json:"requestId"`
+	RequestID  string                `json:"requestId"`
 	TotalCount int                   `json:"totalCount"`
 	Versions   []DatasetVersionEntry `json:"versions"`
 }
@@ -175,7 +175,7 @@ type CreateDatasetVersionRequest struct {
 }
 
 type CreateDatasetVersionResponse struct {
-	RequestId string `json:"requestId"`
+	RequestID string `json:"requestId"`
 	ID        string `json:"id"`
 }
 
@@ -183,5 +183,5 @@ type CreateDatasetVersionResponse struct {
 // 参考百度智能云AIHC文档 https://cloud.baidu.com/doc/AIHC/s/Omc09gd0f
 
 type DeleteDatasetVersionResponse struct {
-	RequestId string `json:"requestId"`
+	RequestID string `json:"requestId"`
 }
